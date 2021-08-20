@@ -1,15 +1,18 @@
-button{
+button {
     background-color: white;
     font-weight: 600;
     padding: 5px;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
-button:hover{
+
+button:hover {
     background-color: black;
     color: white;
     font-weight: 600;
 }
-.apply{
+
+/* apply button style */
+.apply {
     background-color: rgb(190, 5, 5);
     color: white;
     border: none;

@@ -28,17 +28,20 @@
                     </p>
                 </div>
                 <div id="button-container">
+                    <!-- memory calculation -->
                     <div class="mt-5">
                         <h6>Memory</h6>
                         <button onclick="initialValue('memory')">8GB unified memory</button>
                         <button onclick="addValue('memory',180)">16GB unified memory</button>
                     </div>
+                    <!-- ssd calculation -->
                     <div class="mt-5">
                         <h6>Storage</h6>
                         <button onclick="initialValue('ssd')">256GB SSD storage</button>
                         <button onclick="addValue('ssd',100)">512GB SSD storage</button>
                         <button onclick="addValue('ssd',180)">1TB SSD storage</button>
                     </div>
+                    <!-- delivery charge calculation -->
                     <div class="mt-5">
                         <h6>Choose your delivery option</h6>
                         <button onclick="initialValue('delivery')">Friday,Aug 25 FREE Prime Delivery</button>
@@ -73,16 +76,15 @@
                 </div>
                 <div>
                     <h3>Add Promo code</h3>
-                    <input type="text">
-                    <button class="apply">Apply</button>
+                    <input id="coupon-text" type="text">
+                    <button id="apply-button" class="apply">Apply</button>
                 </div>
             </div>
         </section>
-        <span class="container">
+        <div class="container">
             <hr>
-            <h2 class="text-center">Total: $<span>1299</span></h2>
-        </span>
-
+            <h2 class="text-center">Total: $<span id="final-cost">1299</span></h2>
+        </div>
     </main>
     <script src="app.js"></script>
     <!-- bootstrap script -->
