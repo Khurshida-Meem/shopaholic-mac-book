@@ -5,7 +5,7 @@ button {
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: -3px -3px 7px #a0a0a032,
-    3px 3px 5px rgb(94 104 121 / 42%);
+        3px 3px 5px rgb(94 104 121 / 42%);
 }
 
 button:hover {

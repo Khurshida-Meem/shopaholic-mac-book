@@ -1,33 +1,29 @@
-// 16GB memory = 180
-// 512 SSD = 100
-// 1TB SSD = 180
-
-// update price fields
+// update external price fields value onclick button
 function addValue(value, price) {
     const initialCost = document.getElementById(value + '-cost');
     initialCost.innerText = price;
     totalSum();
 }
-// update custom price field
+// update custom price field to 0 onclick button
 function initialValue(value) {
     const cost = document.getElementById(value + '-cost');
     cost.innerText = 0;
     totalSum();
 }
-// take prices from id and make integer
+// take field value from id and make integer
 function getCost(value) {
     return parseInt(document.getElementById(value + '-cost').innerText);
 }
 
 // total sum calculate
 function totalSum() {
+    // total cost from every field value
     const totalSum = getCost('mac') + getCost('memory') + getCost('ssd') + getCost('delivery');
     document.getElementById('total-cost').innerText = totalSum;
     document.getElementById('final-cost').innerText = totalSum;
 }
 
 // coupon code er hisab nikash
-// stevekaku
 document.getElementById('apply-button').addEventListener('click', function () {
     const couponField = document.getElementById('coupon-text');
     const couponText = couponField.value;
@@ -36,5 +32,6 @@ document.getElementById('apply-button').addEventListener('click', function () {
         const discountPrice = totalCost - (totalCost / 5);
         document.getElementById('final-cost').innerText = discountPrice;
     }
+    // clear input field
     couponField.value = '';
 });
