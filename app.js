@@ -21,27 +21,20 @@ function getCost(value) {
 
 // total sum calculate
 function totalSum() {
-    const sum = document.getElementById('total-cost');
-    const finalCost = document.getElementById('final-cost');
-    const macCost = getCost('mac');
-    const memoryCost = getCost('memory');
-    const ssdCost = getCost('ssd');
-    const deliveryCost = getCost('delivery');
-    const totalSum = macCost + memoryCost + ssdCost + deliveryCost;
-    sum.innerText = totalSum;
-    finalCost.innerText = totalSum;
+    const totalSum = getCost('mac') + getCost('memory') + getCost('ssd') + getCost('delivery');
+    document.getElementById('total-cost').innerText = totalSum;
+    document.getElementById('final-cost').innerText = totalSum;
 }
 
 // coupon code er hisab nikash
 // stevekaku
 document.getElementById('apply-button').addEventListener('click', function () {
     const couponField = document.getElementById('coupon-text');
-    const finalCost = document.getElementById('final-cost')
     const couponText = couponField.value;
     if (couponText == 'stevekaku') {
         const totalCost = getCost('total');
         const discountPrice = totalCost - (totalCost / 5);
-        finalCost.innerText = discountPrice;
+        document.getElementById('final-cost').innerText = discountPrice;
     }
     couponField.value = '';
 });
